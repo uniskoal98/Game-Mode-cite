@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Calamity wiki</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    @import url('https://fonts.googleapis.com/css?family=Chela+One');
+    @font-face {
+      font-family: 'Bubble';
+      src: local('Bubble'),
+      url('fonts/ColorBlind.eot'),
+      url('fonts/ColorBlind.woff') format('woff'),
+      url('fonts/ColorBlind.ttf') format('truetype');
+
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="index.js"></script>
+  <script src="covervid.min.js"></script>
+</head>
+
+<body id="top" class="y_scroll" style="overflow-x:hidden; overflow-y : hidden;">
+  <!-- 스크롤 메뉴 !-->
+  <div class="Top_menu">
+    <img src="img/Top_menu/Top.png" id="white" style="cursor:pointer;">
+  </div>
+  <div class="Copyright_menu">
+    <img src="img/Top_menu/Copyright_Menu.png" id="black" style="cursor:pointer;">
+  </div>
+
+
+  <!-- 배경화면 영상 !-->
+
+  <div class="covervid-wrapper">
+      <!-- covervid jquery 플러그인을 사용한 부분 !-->
+      <video class="covervid-video" autoplay muted loop>
+        <source src="video/Snow Trees.mp4" type="video/mp4">
+        <source src="video/Snow Trees.webm" type="video/webm">
+      </video>
+      <!-- 배경화면에 동영상을 어둡게 보이기 위한 영역 !-->
+      <div class="overlay"></div>
+
+      <!-- 실제 콘텐츠 내용 부분 !-->
+      <div class="main" style="overflow-x : hidden; overflow-y : hidden;">
+        <!-- 메인 제목 부분 (Calamity) !-->
+        <div style="position : relative; width : 100vw; margin : 0 auto; text-align : center;">
+          <p style="color:#fff; font-family:'Bubble';" class="main_text">Calamity</p>
+          <span style="color:#fff; font-family:'Bubble';">Terraria Calamity mod</span>
+        </div>
+        <!-- 메인 콘텐츠 아이콘 부분 !-->
+        <div style="margin-top : 8vh;">
+          <div style="width : 900px; margin : 0 auto; text-align:center; height : 26vh;">
+            <div class="icon">
+              <img src="img/Main_icon/Soul_Edge.png" class="Frontend" id="img_Soul_Edge">
+              <div class="jquery" id="menu1">
+                <span style="color:#fff; font-family:'Bubble';">Weapon</span>
+              </div>
+              <img src="img/Main_img/Menu.png" class="Backend" usemap=#Soul_Edge>
+              <map name="Soul_Edge">
+              <area shape = "poly" coords="0,100,100,200,200,100,100,0" id="Menu_Soul_Edge">
+              </map>
+            </div>
+            <div class="icon" style="margin-left:120px;">
+              <img src="img/Main_icon/Cryo_Stone.png" class="Frontend" style="top:73px;" id="img_Cryo_Stone">
+              <div class="jquery" id="menu2">
+                <span style="color:#fff; font-family:'Bubble';">Accessory</span>
+              </div>
+              <img src="img/Main_img/Menu.png" class="Backend" usemap="#Cryo_Stone">
+              <map name="Cryo_Stone">
+              <area shape = "poly" coords="0,100,100,200,200,100,100,0" id="Menu_Cryo_Stone">
+              </map>
+            </div>
+            <div class="icon" style="margin-left:120px;">
+              <img src="img/Main_icon/Calamitas.png" class="Frontend" style="top : 42.5px;" id="img_Calamitas">
+              <div class="jquery" id="menu3">
+                <span style="color:#fff; font-family:'Bubble';">Bosses</span>
+              </div>
+              <img src="img/Main_img/Menu.png" class="Backend" usemap="#Calamitas">
+              <map name="Calamitas">
+              <area shape = "poly" coords="0,100,100,200,200,100,100,0"  id="Menu_Calamitas">
+              </map>
+            </div>
+          </div>
+          <div style="width : 900px; margin : 0 auto; text-align:center; padding-top : 4vh;">
+            <div class="icon">
+              <img src="img/Main_icon/Aero_Slime.png" class="Frontend" style="top : 77.5px;" id="img_Aero_Slime">
+              <div class="jquery" id="menu4">
+                <span style="color:#fff; font-family:'Bubble';">Enemy</span>
+              </div>
+              <img src="img/Main_img/Menu.png" class="Backend" usemap="#Aero_Slime">
+              <map name="Aero_Slime">
+                <area shape = "poly" coords="0,100,100,200,200,100,100,0"  id="Menu_Aero_Slime">
+              </map>
+            </div>
+            <div class="icon" style="margin-left:120px;">
+              <img src="img/Main_icon/Biome.png" class="Frontend" id="img_Biome">
+              <div class="jquery" id="menu5">
+                <span style="color:#fff; font-family:'Bubble';">Biome</span>
+              </div>
+              <img src="img/Main_img/Menu.png" class="Backend" usemap="#Biome">
+              <map name="Biome">
+                <area shape = "poly" coords="0,100,100,200,200,100,100,0"id="Menu_Biome">
+              </map>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- 두 번째 영역 !-->
+  <div class="weapon">
+
+  </div>
+  <!-- 세 번째 영역 !-->
+  <div class="accessory">
+
+  </div>
+  <!-- 네 번째 영역 !-->
+  <div class="bosses">
+
+  </div>
+  <!-- 다섯 번째 영역 !-->
+  <div class="enemy">
+
+  </div>
+  <!-- 여섯 번째 영역 !-->
+  <div class="biome">
+
+  </div>
+  <!-- 저작권 !-->
+  <div class="copyright">
+    <div class="main" style="overflow-x : hidden; overflow-y : hidden;">
+      <!-- 메인 제목 부분 (Calamity) !-->
+      <div style="position : relative; width : 100vw; margin : 0 auto; text-align : center;">
+        <p style="color:#000; font-family:'Bubble';" class="main_text">Copyright</p>
+        <span style="color:#000;">이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 3.0 Unported</span>
+        <span style="color:#000;">출처 : <a href="https://calamitymod.gamepedia.com/Calamity_Mod_Wiki" target="_blank">테라리아 공식 모드 위키</a></span>
+      </div>
+      <!-- 메인 콘텐츠 아이콘 부분 !-->
+      <div style="margin-top : 13vh;">
+        <div style="width : 900px; margin : 0 auto; text-align:center; height : 27vh;">
+          <div class="icon">
+            <img src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="top : 84px; left: 56px;" class="Frontend" id="img_Soul_Edge">
+            <img src="img/Main_img/Menu_Black.png" class="Backend" usemap=#Copy>
+            <map name="Copy">
+            <area shape = "poly" coords="0,100,100,200,200,100,100,0" rel = "license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" id="Menu_Copy">
+            </map>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- 비디오 사용 !-->
+
+  <script>
+    $('.covervid-video').coverVid(640, 360);
+  </script>
+</body>
+
+</html>

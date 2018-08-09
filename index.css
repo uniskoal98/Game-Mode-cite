@@ -1,0 +1,154 @@
+/* 전체 영역의 css 를 표기할 때 *를 사용한다. */
+* {
+  margin : 0px;
+}
+
+/* 모니터의 전체 영역을 잡습니다. */
+html,body {
+  position: relative;
+  width : 100%;
+  height: 100vh;
+}
+
+
+
+/* covervid 제이쿼리 라이브러리를 사용하는 법입니다. */
+.covervid-wrapper {
+   position: relative;
+   top: 0;
+   left: 0;
+   height:100vh;
+   width : 100vw;
+   z-index : 990;
+
+}
+.covervid-wrapper.hide {
+  display: none;
+}
+
+
+/* 언제든 위로 올라갈 수 있는 아이콘 */
+.Top_menu {
+  position: fixed;
+  bottom : 50px;
+  right : 50px;
+  z-index : 1000;
+}
+.Copyright_menu {
+  position: fixed;
+  bottom : 140px;
+  right : 50px;
+  z-index : 1000;
+}
+
+/* 배경화면으로 넣은 동영상을 어둡게 표현하기 위한 영역입니다. */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color : #000;
+  opacity: 0.6;
+}
+ /* 메인 부분은 relative로 포지션을 잡아야 합니다. */
+.main {
+  position: relative;
+  overflow: auto;
+}
+
+/* 메인 내용 부분의 css 입니다. */
+.main_text {
+  font-weight: 700;
+  font-size : 100px;
+  margin-top :8vh;
+}
+.main span {
+  display: block;
+  text-align:center;
+  font-size : 18px;
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* 테이블 정중앙 배치 */
+.table_location {
+  margin : 0 auto;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width : 200px;
+  height : 200px;
+}
+
+.Backend {
+  position: absolute;
+  top : 0;
+  left : 0;
+}
+.Frontend {
+  position: absolute;
+  top : 60px;
+  left: 60px;
+
+
+}
+.jquery {
+  display: none;
+}
+.jquery span {
+  position: absolute;
+  width : 200px;
+  top : 0;
+  bottom : 0;
+  margin : auto;
+  height : 18.4px;
+}
+
+/* 두번째 영역 css */
+
+.weapon {
+  position: relative;
+  background-color : #CDECFA;
+  z-index : 995;
+  width : 100vw;
+  height : 100vh;
+}
+.accessory {
+  position: relative;
+  background-color : red;
+  z-index : 995;
+  width : 100vw;
+  height : 100vh;
+}
+.bosses {
+  position: relative;
+  background-color : blue;
+  z-index : 995;
+  width : 100vw;
+  height : 100vh;
+}
+.enemy {
+  position: relative;
+  background-color : black;
+  z-index : 995;
+  width : 100vw;
+  height : 100vh;
+}
+.biome {
+  position: relative;
+  background-color : yellow;
+  z-index : 995;
+  width : 100vw;
+  height : 100vh;
+}
+.copyright {
+  position: relative;
+  background-color : #fff;
+  z-index : 995;
+  width : 100vw;
+  height : 100vh;
+}
