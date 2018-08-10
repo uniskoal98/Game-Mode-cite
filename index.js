@@ -133,7 +133,7 @@ $(document).ready(function() {
     var wrapper_bottom = Menu_scroll + wrapper.height();
 
     if($(this).scrollTop() >= 50) {
-      $("#white").attr("src","img/Top_menu/Top_black.png");
+      $("#white").attr("src","img/Top_menu/Top_Black.png");
       $("#black").attr("src","img/Top_menu/Copyright_Menu_Black.png");
     }
     else {
