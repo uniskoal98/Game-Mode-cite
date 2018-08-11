@@ -53,7 +53,7 @@ $(document).ready(function() {
   });
   $("#Menu_Soul_Edge").click(function() {
     Floor = 1;
-    var weapon_offset = $('.weapon').offset();
+    var weapon_offset = $('#weapon').offset();
 
     $('html,body').animate({scrollTop : weapon_offset.top}, 400);
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
   });
   $("#Menu_Cryo_Stone").click(function() {
     Floor = 2;
-    var accessory_offset = $('.accessory').offset();
+    var accessory_offset = $('#accessory').offset();
 
     $('html,body').animate({scrollTop : accessory_offset.top}, 600);
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
   });
   $("#Menu_Calamitas").click(function() {
     Floor = 3;
-    var bosses_offset = $('.bosses').offset();
+    var bosses_offset = $('#bosses').offset();
 
     $('html,body').animate({scrollTop : bosses_offset.top}, 800);
 
@@ -99,7 +99,7 @@ $(document).ready(function() {
   });
   $("#Menu_Aero_Slime").click(function() {
     Floor = 4;
-    var enemy_offset = $('.enemy').offset();
+    var enemy_offset = $('#enemy').offset();
 
     $('html,body').animate({scrollTop : enemy_offset.top}, 1000);
 
@@ -114,13 +114,13 @@ $(document).ready(function() {
   });
   $("#Menu_Biome").click(function() {
     Floor = 5;
-    var biome_offset = $('.biome').offset();
+    var biome_offset = $('#biome').offset();
 
     $('html,body').animate({scrollTop : biome_offset.top}, 1200);
 
   });
 
-  
+
 
 
   /* 5개의 아이콘 동적 표현 식 */
@@ -157,9 +157,6 @@ $(document).ready(function() {
     $('html,body').animate({scrollTop : copyright_offset.top}, 1000);
 
   });
-
-
-
 
 
 
