@@ -6,6 +6,8 @@
  * paul@paulkr.com
  */
 
+
+
 function randCol (r, g, b, a) {
   return "rgba(" + Math.floor(Math.random() * r).toString() + "," +
                    Math.floor(Math.random() * g).toString() + "," +
@@ -17,7 +19,9 @@ $.fn.quietflow = function (attributes) {
   // Cache node
   var $element = $(this);
   var $limitX  = $element.width();
-  var $limitY  = $element.height();
+  var $limitY  = $element.height() * 5;
+
+
 
   var centerX  = $limitX/2;
   var centerY  = $limitY/2;
@@ -145,20 +149,65 @@ $.fn.quietflow = function (attributes) {
   $(window).resize(function () {
 
     $limitX = $element.width();
-    $limitY = $element.height();
+    $limitY = $element.height() * 5;
+
+
 
     var oldWidth  =  $("#Quietflow").css("width").replace("px", "");
     var oldHeight = $("#Quietflow").css("height").replace("px", "");
 
+
+
+
     $("#Quietflow").css({
-      "width" : window.innerWidth,
-      "height": window.innerHeight
+      "width" : $limitX,
+      "height": $limitY
     });
 
-    var ratio1 = oldWidth / window.innerWidth;
-    var ratio2 = oldHeight / window.innerHeight;
+
+
+    var ratio1 = oldWidth / $limitX;
+    var ratio2 = oldHeight / $limitY;
+
 
     ctx.scale(ratio1, ratio2);
+
+    //층 밀림 현상 해결
+
+    var Floor_array = [$("#weapon"),$("#accessory"),$("#bosses"),$("#emeny"),$("#biome"),$(".copyright")];
+
+    switch(Floor) {
+      case 1:
+        var resize = Floor_array[Floor-1].offset();
+        $('html,body').animate({scrollTop : resize.top},0);
+      break;
+
+      case 2:
+        var resize = Floor_array[Floor-1].offset();
+        $('html,body').animate({scrollTop : resize.top},0);
+      break;
+
+      case 3:
+        var resize = Floor_array[Floor-1].offset();
+        $('html,body').animate({scrollTop : resize.top},0);
+      break;
+
+      case 4:
+        var resize = Floor_array[Floor-1].offset();
+        $('html,body').animate({scrollTop : resize.top},0);
+      break;
+
+      case 5:
+        var resize = Floor_array[Floor-1].offset();
+        $('html,body').animate({scrollTop : resize.top},0);
+      break;
+
+      case 6:
+        var resize = Floor_array[Floor-1].offset();
+        $('html,body').animate({scrollTop : resize.top},0);
+      break;
+
+    };
   });
 
   var id;
@@ -297,6 +346,8 @@ $.fn.quietflow = function (attributes) {
 
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, $limitX, $limitY);
+
+
 
     for (var i = 0; i < starData.length; i++) {
 
@@ -458,7 +509,7 @@ $.fn.quietflow = function (attributes) {
 
       var starData = [];
 
-      for (var i = 0; i < 800; i++){
+      for (var i = 0; i < 900; i++){
         starData.push([Math.random() * $limitX * 2 - $limitX,
                        Math.random() * $limitY,
                        Math.random() * effectAttrs.starSize,

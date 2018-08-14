@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
   /* 스크롤 영역 부분에 새로고침시 이미지가 변하지 않는 경우를 막기 위해 설정 */
   if($(this).scrollTop() >= 50) {
@@ -8,10 +10,16 @@ $(document).ready(function() {
       setTimeout(function() {
         scrollTo(0,0);
       });
+
+
+
+
   }
 
+
+
   /* 원페이지 스크롤 이벤트 */
-  var Floor = 0;
+
   var ScrollEvent = false;
 
   $('html,body').on('mousewheel', function(c) {
@@ -156,7 +164,21 @@ $(document).ready(function() {
 
     $('html,body').animate({scrollTop : copyright_offset.top}, 1000);
 
-  });
+  });0
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 

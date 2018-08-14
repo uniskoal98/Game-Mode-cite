@@ -11,20 +11,24 @@
     @font-face {
       font-family: 'Bubble';
       src: local('Bubble'),
-      url('fonts/ColorBlind.eot'),
       url('fonts/ColorBlind.ttf') format('truetype');
     }
+
     @font-face {
-      font-family : 'wonder';
-      src : local('wonder'),
-      url("fonts/wonder.eot"),
-      url("fonts/wonder.ttf") format('truetype');
+      font-family: 'wonder';
+      src: local('8-BIT WONDER'),
+      url("fonts/8-BIT WONDER.ttf") format('truetype');
     }
   </style>
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="index.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    //층 이벤트 글로벌변수
+    var Floor = 0;
+  </script>
+  <script type="text/javascript" src="index.js"></script>
   <script src="covervid.min.js"></script>
-  <script src="quietflow.js"></script>
+  <script type="text/javascript"  src="quietflow.js"></script>
+
 </head>
 
 <body id="top" class="y_scroll" style="overflow-x:hidden; overflow-y : hidden;">
@@ -116,9 +120,11 @@
   </div>
 
   <!-- 두 번째 영역 !-->
-  <div id="space"> <!-- 우주배경을 주기 위한 영역 !-->
-    <div id="weapon">
 
+    <div id="weapon">
+      <div class = "weapon_text">
+        <span class ="submenu_text">weapon</span>
+      </div>
     </div>
 
     <!-- 세 번째 영역 !-->
@@ -138,7 +144,8 @@
     <div id="biome">
 
     </div>
-  </div>
+
+
   <!-- 저작권 !-->
   <div class="copyright">
     <div class="main" style="overflow-x : hidden; overflow-y : hidden;">
@@ -172,15 +179,10 @@
     $('.covervid-video').coverVid(640, 360);
   </script>
   <script>
-    $("#space").quietflow({
-      speed: 80
+    $("#weapon").quietflow({
+
     });
   </script>
-
-
-
-
-  
 </body>
 
 </html>
