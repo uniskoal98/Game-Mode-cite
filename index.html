@@ -9,12 +9,6 @@
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     @import url('https://fonts.googleapis.com/css?family=Chela+One');
     @font-face {
-      font-family: 'Bubble';
-      src: local('Bubble'),
-      url('fonts/ColorBlind.ttf') format('truetype');
-    }
-
-    @font-face {
       font-family: 'Star';
       src: local('starforce'),
       url('fonts/starforce.ttf') format('truetype'),
@@ -26,9 +20,10 @@
     //층 이벤트 글로벌변수
     var Floor = 0;
   </script>
-  <script type="text/javascript" src="index.js"></script>
-  <script src="covervid.min.js"></script>
-  <script type="text/javascript"  src="quietflow.js"></script>
+  <script type="text/javascript" src="Javascript/index.js"></script>
+  <script src="Javascript/covervid.min.js"></script>
+  <script type="text/javascript" src="Javascript/quietflow.js"></script>
+  <script type="text/javascript" src="Javascript/weapon.js"></script>
 
 </head>
 
@@ -66,7 +61,7 @@
           <div class="icon">
             <img src="img/Main_icon/Soul_Edge.png" class="Frontend" id="img_Soul_Edge">
             <div class="jquery" id="menu1">
-              <span style="color:#fff; font-family:'Bubble';">Weapon</span>
+              <span style="color:#fff; font-family:'Star'; font-size : 14px;">Weapon</span>
             </div>
             <img src="img/Main_img/Menu.png" class="Backend" usemap=#Soul_Edge>
             <map name="Soul_Edge">
@@ -76,7 +71,7 @@
           <div class="icon" style="margin-left:120px;">
             <img src="img/Main_icon/Cryo_Stone.png" class="Frontend" style="top:73px;" id="img_Cryo_Stone">
             <div class="jquery" id="menu2">
-              <span style="color:#fff; font-family:'Bubble';">Accessory</span>
+              <span style="color:#fff; font-family:'Star'; font-size : 14px;">Accessory</span>
             </div>
             <img src="img/Main_img/Menu.png" class="Backend" usemap="#Cryo_Stone">
             <map name="Cryo_Stone">
@@ -86,7 +81,7 @@
           <div class="icon" style="margin-left:120px;">
             <img src="img/Main_icon/Calamitas.png" class="Frontend" style="top : 42.5px;" id="img_Calamitas">
             <div class="jquery" id="menu3">
-              <span style="color:#fff; font-family:'Bubble';">Bosses</span>
+              <span style="color:#fff; font-family:'Star'; font-size : 14px;">Bosses</span>
             </div>
             <img src="img/Main_img/Menu.png" class="Backend" usemap="#Calamitas">
             <map name="Calamitas">
@@ -98,7 +93,7 @@
           <div class="icon">
             <img src="img/Main_icon/Aero_Slime.png" class="Frontend" style="top : 77.5px;" id="img_Aero_Slime">
             <div class="jquery" id="menu4">
-              <span style="color:#fff; font-family:'Bubble';">Enemy</span>
+              <span style="color:#fff; font-family:'Star'; font-size : 14px;">Enemy</span>
             </div>
             <img src="img/Main_img/Menu.png" class="Backend" usemap="#Aero_Slime">
             <map name="Aero_Slime">
@@ -108,12 +103,13 @@
           <div class="icon" style="margin-left:120px;">
             <img src="img/Main_icon/Biome.png" class="Frontend" id="img_Biome">
             <div class="jquery" id="menu5">
-              <span style="color:#fff; font-family:'Bubble';">Biome</span>
+              <span style="color:#fff; font-family:'Star'; font-size : 14px;">Biome</span>
             </div>
             <img src="img/Main_img/Menu.png" class="Backend" usemap="#Biome">
             <map name="Biome">
                 <area shape = "poly" coords="0,100,100,200,200,100,100,0"id="Menu_Biome">
               </map>
+
           </div>
         </div>
       </div>
@@ -122,29 +118,77 @@
 
   <!-- 두 번째 영역 !-->
 
-    <div id="weapon">
-      <div class = "weapon_text">
-        <span class ="submenu_text">WEAPON</span>
+  <div id="weapon">
+    <div id="weapon_frame_one" style ="height : 100%; width : 100%; position : absolute; z-index : 5;">
+      <div class="weapon_text">
+        <span class="submenu_text">WEAPON</span>
+      </div>
+
+      <div class="weapon_margin_Box">
+        <div class="weapon_Content">
+          <!-- 워리어 콘텐츠 !-->
+          <div class="weapon_class" id="warrior">
+            <img src="img/Weapon_image/Warrior.jpg">
+            <div class="weapon_id" id="warrior_id">
+              <p style="color:#fff; font-family: 'Star' ,cursive;">WARRIOR</p>
+            </div>
+          </div>
+          <!-- 레인저 콘텐츠 !-->
+          <div class="weapon_class" id="Ranger">
+            <img src="img/Weapon_image/Ranger.png">
+            <div class="weapon_id" id="Ranger_id">
+              <p style="color:#fff; font-family: 'Star' ,cursive;">RANGER</p>
+            </div>
+          </div>
+          <!-- 소환사 콘텐츠 !-->
+          <div class="weapon_class" id="Summoner">
+            <img src="img/Weapon_image/Summoner.png">
+            <div class="weapon_id" id="Summoner_id">
+              <p style="color:#fff; font-family: 'Star' ,cursive;">SUMMONER</p>
+            </div>
+          </div>
+          <!-- 투척류 콘텐츠 !-->
+          <div class="weapon_class" id="Thrower">
+            <img src="img/Weapon_image/Thrower.png">
+            <div class="weapon_id" id="Thrower_id">
+              <p style="color:#fff; font-family: 'Star' ,cursive;">THROWER</p>
+            </div>
+          </div>
+          <!-- 마법사 콘텐츠 !-->
+          <div class="weapon_class" id="Socerer">
+            <img src="img/Weapon_image/Socerer.png">
+            <div class="weapon_id" id="Socerer_id">
+              <p style="color:#fff; font-family: 'Star' ,cursive;">SOCERER</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <!-- 세 번째 영역 !-->
-    <div id="accessory">
+    <div id="weapon_frame_two_warrior"  style ="height : 100%; width : 100%; position : absolute; z-index : 4;">
 
     </div>
 
-    <!-- 네 번째 영역 !-->
-    <div id="bosses">
+  </div>
 
-    </div>
-    <!-- 다섯 번째 영역 !-->
-    <div id="enemy">
+  <!-- 세 번째 영역 !-->
+  <div id="accessory">
 
-    </div>
-    <!-- 여섯 번째 영역 !-->
-    <div id="biome">
+  </div>
 
-    </div>
+  <!-- 네 번째 영역 !-->
+  <div id="bosses">
+
+  </div>
+  <!-- 다섯 번째 영역 !-->
+  <div id="enemy">
+
+  </div>
+  <!-- 여섯 번째 영역 !-->
+  <div id="biome">
+
+  </div>
 
 
   <!-- 저작권 !-->
@@ -152,7 +196,7 @@
     <div class="main" style="overflow-x : hidden; overflow-y : hidden;">
       <!-- 메인 제목 부분 (Calamity) !-->
       <div style="position : relative; width : 100vw; margin : 0 auto; text-align : center;">
-        <p style="color:#000; font-family:'Bubble';" class="main_text">Copyright</p>
+        <p style="color:#000; font-family:'Star';" class="main_text">COPYRIGHT</p>
         <span style="color:#000;">이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 3.0 Unported</span>
         <span style="color:#000;">출처 : <a href="https://calamitymod.gamepedia.com/Calamity_Mod_Wiki" target="_blank">테라리아 공식 모드 위키</a></span>
       </div>

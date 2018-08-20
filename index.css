@@ -37,7 +37,7 @@ html, body {
   position: fixed;
   bottom: 140px;
   right: 50px;
-  z-index: 1000;
+  z-index: 5000;
 }
 
 /* 배경화면으로 넣은 동영상을 어둡게 표현하기 위한 영역입니다. */
@@ -150,38 +150,64 @@ html, body {
 
 .copyright {
   position: relative;
-  z-index: 995;
   width: 100%;
   height: 100%;
 }
 .weapon_text {
+  position: relative;
   text-align : center;
-  width : 100vw;
+  width : 100%;
   padding-top: 8vh;
 }
 .submenu_text {
-  font-weight: 700;
-  font-size: 6vw;
+  font-weight: 1000;
+  font-size: 12vh;
   font-family : 'Star',cursive;
   color : white;
 
 }
-.weapon_content {
+.weapon_Content {
+  position:absolute;
   width : 100%;
-  height : 0;
-  overflow : hidden;
-  margin-top : 10vh;
-  text-align : center;
-  padding-bottom : 56.26%;
+  text-align: center;
+  top : 0;
+  bottom : 0;
+  margin : auto;
+  height :  29vw;
 }
 
-.weapon_Box {
+.weapon_class {
   display: inline-block;
-  position: absolute;
-  top : 0;
-  left : 0;
-  width : 20%;
-  height : 30%;
-  border : 1px solid #fff;
-  margin-right : 3vw;
+  width : 15%;
+  height : 0;
+  overflow : hidden;
+  padding-bottom : 28vw;
+  margin : 0 1vw 0 1vw;
+  border : 4px solid #fff;
+  z-index : 1000;
+  cursor: pointer;
+}
+.weapon_class img {
+  position: relative;
+  max-width : 100%;
+  height : 28vw;
+}
+.weapon_class p {
+  font-size : 1vw;
+}
+.weapon_id {
+
+  position: relative;
+  transition-duration: 1s;
+  transform : translateY(20px);
+}
+.weapon_id.open {
+  transition-duration: 0.5s;
+  transform : translateY(-20px);
+}
+
+.weapon_margin_Box {
+  position: relative;
+  width : 100%;
+  height : -webkit-calc(100% - 20vh);
 }
