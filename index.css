@@ -159,7 +159,16 @@ html, body {
   width : 100%;
   padding-top: 8vh;
 }
+/* 버그를 고치기 위한 클론 */
+.weapon_text_BUG {
+  text-align : center;
+  width : 100%;
+  padding-top: 8vh;
+}
+/* ///////////////////// */
+
 .submenu_text {
+
   font-weight: 1000;
   font-size: 12vh;
   font-family : 'Star',cursive;
@@ -210,4 +219,29 @@ html, body {
   position: relative;
   width : 100%;
   height : -webkit-calc(100% - 20vh);
+}
+
+.weapon_frame_warrior_select {
+  position: absolute;
+  width : 100%;
+  top : 0;
+  bottom : 0;
+  display : table;
+  margin : auto;
+  text-align : center;
+  height : 32vw;
+
+}
+.warrior_weapon{
+  position: relative;
+  border : 4px solid #fff;
+  width : 70vw;
+  text-align : center;
+  margin : 0 auto;
+  height : 4vw;
+  line-height : calc(4vw + 3px);
+  margin-bottom : 4vw;
+  margin-top : 4vw;
+  vertical-align: middle;
+  cursor : pointer;
 }

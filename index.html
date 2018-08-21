@@ -119,10 +119,15 @@
   <!-- 두 번째 영역 !-->
 
   <div id="weapon">
-    <div id="weapon_frame_one" style ="height : 100%; width : 100%; position : absolute; z-index : 5;">
+    <div id="weapon_frame_one" style="height : 100%; width : 100%; position : absolute; z-index : 5;">
       <div class="weapon_text">
         <span class="submenu_text">WEAPON</span>
       </div>
+      <!-- 애니메이션이 일어났을때 영역을 벗어나는 버그를 수정하기 위해 늘 고정하는 투명 영역입니다. !-->
+      <div class="weapon_text_BUG" style="z-index : -1000; position :absolute; top : -70px; visibility : hidden;">
+        <span class="submenu_text">BUG</span>
+      </div>
+      <!-- ////////////////////////////////////////////////////////////////////////////////// !-->
 
       <div class="weapon_margin_Box">
         <div class="weapon_Content">
@@ -166,8 +171,27 @@
       </div>
     </div>
 
-    <div id="weapon_frame_two_warrior"  style ="height : 100%; width : 100%; position : absolute; z-index : 4;">
+    <div id="weapon_frame_two_warrior" style="height : 100%; width : 100%; position : absolute; z-index : 4";>
 
+
+        <!-- 무기 종류 선택하는 영역 !-->
+        <div class = "weapon_frame_warrior_select" style="z-index : 5">
+          <div class="warrior_weapon" id="Sword" style="left : -100%;">
+            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SWORD</span>
+          </div>
+          <div class="warrior_weapon" id="Spear" style="left : -100%;">
+            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SPEAR</span>
+          </div>
+          <div class="warrior_weapon" id="Yoyo" style="left : -100%;">
+            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">YOYO</span>
+          </div>
+          <div class="warrior_weapon" id="Boomerangs" style="left : -100%;">
+            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">BOOMERAGNS</span>
+          </div>
+          <div class="warrior_weapon" id="Flails" style="left : -100%;">
+            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">FLAILS</span>
+          </div>
+        </div>
     </div>
 
   </div>
