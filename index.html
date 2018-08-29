@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Calamity wiki</title>
+  <title>Calamity Mod</title>
   <link rel="stylesheet" type="text/css" href="index.css">
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -30,10 +30,10 @@
 <body id="top" class="y_scroll" style="overflow-x:hidden; overflow-y : hidden;">
   <!-- 스크롤 메뉴 !-->
   <div class="Top_menu">
-    <img src="img/Top_menu/Top.png" id="white" style="cursor:pointer;">
+    <img src="img/Top_menu/Top.png" id="white" style="cursor:pointer; width : 60px; height : 60px;">
   </div>
   <div class="Copyright_menu">
-    <img src="img/Top_menu/Copyright_Menu.png" id="black" style="cursor:pointer;">
+    <img src="img/Top_menu/Copyright_Menu.png" id="black" style="cursor:pointer;  width : 60px; height : 60px;">
   </div>
 
 
@@ -119,17 +119,17 @@
   <!-- 두 번째 영역 !-->
 
   <div id="weapon">
-    <div id="weapon_frame_one" style="height : 100%; width : 100%; position : absolute; z-index : 5;">
+    <div id="weapon_frame_one" style="height : 100%; width : 100%; position : absolute; z-index : 10; ">
       <div class="weapon_text">
         <span class="submenu_text">WEAPON</span>
       </div>
       <!-- 애니메이션이 일어났을때 영역을 벗어나는 버그를 수정하기 위해 늘 고정하는 투명 영역입니다. !-->
-      <div class="weapon_text_BUG" style="z-index : -1000; position :absolute; top : -70px; visibility : hidden;">
+      <div class="div_text_BUG" style="z-index : -1000; position :absolute; top : -70px; visibility : hidden;">
         <span class="submenu_text">BUG</span>
       </div>
       <!-- ////////////////////////////////////////////////////////////////////////////////// !-->
 
-      <div class="weapon_margin_Box">
+      <div class="margin_Box">
         <div class="weapon_Content">
           <!-- 워리어 콘텐츠 !-->
           <div class="weapon_class" id="warrior">
@@ -171,87 +171,318 @@
       </div>
     </div>
 
-    <div id="weapon_frame_two_warrior" style="height : 100%; width : 100%; position : absolute; z-index : 4";>
-
-
-        <!-- 무기 종류 선택하는 영역 !-->
-        <div class = "weapon_frame_warrior_select" style="z-index : 5">
-          <div class="warrior_weapon" id="Sword" style="left : -100%;">
-            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SWORD</span>
-          </div>
-          <div class="warrior_weapon" id="Spear" style="left : -100%;">
-            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SPEAR</span>
-          </div>
-          <div class="warrior_weapon" id="Yoyo" style="left : -100%;">
-            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">YOYO</span>
-          </div>
-          <div class="warrior_weapon" id="Boomerangs" style="left : -100%;">
-            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">BOOMERAGNS</span>
-          </div>
-          <div class="warrior_weapon" id="Flails" style="left : -100%;">
-            <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">FLAILS</span>
-          </div>
+    <div id="weapon_frame_two_warrior" style="height : 100%; width : 100%; position : absolute;">
+      <!-- 무기 종류 선택하는 영역 !-->
+      <div class="weapon_frame_warrior_select" id="warrior_select" style="z-index : 5">
+        <div class="warrior_weapon" id="Sword" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SWORD</span>
         </div>
+        <div class="warrior_weapon" id="Spear" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SPEAR</span>
+        </div>
+        <div class="warrior_weapon" id="Yoyo" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">YOYO</span>
+        </div>
+        <div class="warrior_weapon" id="Boomerangs" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">BOOMERAGNS</span>
+        </div>
+        <div class="warrior_weapon" id="Flails" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">FLAILS</span>
+        </div>
+      </div>
     </div>
 
+    <div id="weapon_frame_three_warrior" style="height : 100%; width : 100%; position : absolute; display : none;">
+      <div class="warrior_info" style="width :90vw; height : 100%; margin : 0 auto; ">
+        <p style="color : #fff; font-family : 'Star',cursive; font-size : 3vw; margin: 2vw 0 0 0; padding-bottom : 3vw;">PRE-HARDMODE</p>
+        <!-- PRE HADEMODE 무기 !-->
+        <table width="100%" id="Sword_Pre_1">
+          <tbody>
+            <tr class="padding">
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Wulfrum_Blade.png" style="display: block; margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">WULFRUM BLADE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Spore_Knife.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">SPORE KNIFE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Depth_Blade.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">DEPTH BLADE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Redtide_Sword.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">REDTIDE SWORD</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Aquatic_Discharge.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">AQUATIC DISCHARGE</p>
+              </td>
+            </tr>
+            <tr class="padding">
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Teardrop_Cleaver.png" style="display: block; margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">TEARDROP CLEAVER</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Perfect_Dark.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">PERFECT DARK</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Warblade.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">WARBLADE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Leeching_Dagger.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">LEECHING DAGGER</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Bloody_Rupture.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">BLOODY RUPTURE</p>
+              </td>
+            </tr>
+            <tr class="padding">
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Vein_Burster.png" style="display: block; margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">VEIN BURSTER</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Burnt_Sienna.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">BURNT SIENNA</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Crimson_Crusher_Blade.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">CRIMSON CRUSHER BLADE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Corrupted_Crusher_Blade.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">CORRUPTED CRUSHER BLADE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Ancient_Shiv.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">ANCIENT SHIV</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Bloody_Edge.png" style="display: block; margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">BLOODY EDGE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Caustic_Edge.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">CAUSTIC EDGE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Wind_Blade.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">WIND BLADE</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Old_Lord_Oathsword.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">OLD LORD OATHSWORD</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Bladecrest_Oathsword.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">BLADECREST OATHSWORD</p>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+        <table width="100%" id="Sword_Pre_2" style="left : 100%;">
+          <tbody>
+            <tr>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Flameburst_Shortsword.png" style="display: block; margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">FLAMEBURST SHRTSWORD</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Night's_Stabber.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">NIGHT'S STABBER</p>
+              </td>
+              <td width="20%" align="center">
+                <img src="img/Weapon/Melee_Weapon/Sword/Pre-Hardmode/Gelitic_Blade.png" style="display: block;  margin : 0 auto; padding-bottom : 1vw;">
+                <p style="color : #fff; font-family : 'Star',cursive; font-size : 1vw;">GELITIC BLADE</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- ///////////////// !-->
+      </div>
+    </div>
+
+
+    <div id="weapon_frame_two_ranger" style="height : 100%; width : 100%; position : absolute;">
+      <!-- 무기 종류 선택하는 영역 !-->
+      <div class="weapon_frame_warrior_select" id="ranger_select" style="z-index : 5">
+        <div class="warrior_weapon" id="Guns" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">GUNS</span>
+        </div>
+        <div class="warrior_weapon" id="Bows" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">BOWS</span>
+        </div>
+        <div class="warrior_weapon" id="Repeaters" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">REPEATERS</span>
+        </div>
+        <div class="warrior_weapon" id="Flamethrowers" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">FLAMETHROWERS</span>
+        </div>
+        <div class="warrior_weapon" id="Launchers" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">LAUNCHERS</span>
+        </div>
+        <div class="warrior_weapon" id="Others" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">OTHERS</span>
+        </div>
+      </div>
+    </div>
+    <div id="weapon_frame_two_summoner" style="height : 100%; width : 100%; position : absolute;">
+      <!-- 무기 종류 선택하는 영역 !-->
+      <div class="weapon_frame_warrior_select" style="z-index : 5">
+        <div class="warrior_weapon" id="Sword" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SWORD</span>
+        </div>
+        <div class="warrior_weapon" id="Spear" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SPEAR</span>
+        </div>
+        <div class="warrior_weapon" id="Yoyo" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">YOYO</span>
+        </div>
+        <div class="warrior_weapon" id="Boomerangs" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">BOOMERAGNS</span>
+        </div>
+        <div class="warrior_weapon" id="Flails" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">FLAILS</span>
+        </div>
+      </div>
+    </div>
+    <div id="weapon_frame_two_thrower" style="height : 100%; width : 100%; position : absolute;">
+      <!-- 무기 종류 선택하는 영역 !-->
+      <div class="weapon_frame_warrior_select" id="thrower_select" style="z-index : 5">
+        <div class="warrior_weapon" id="Consumeables" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">CONSUMEALBES</span>
+        </div>
+        <div class="warrior_weapon" id="Throw_Boomerangs" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">BOOMERANGS</span>
+        </div>
+        <div class="warrior_weapon" id="Throw_Others" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">OTHERS</span>
+        </div>
+      </div>
+    </div>
+    <div id="weapon_frame_two_socerer" style="height : 100%; width : 100%; position : absolute;">
+      <!-- 무기 종류 선택하는 영역 !-->
+      <div class="weapon_frame_warrior_select" id="socerer_select" style="z-index : 5">
+        <div class="warrior_weapon" id="Wand" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">WAND</span>
+        </div>
+        <div class="warrior_weapon" id="SpellTome" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">SPELL TOME</span>
+        </div>
+        <div class="warrior_weapon" id="MagicGun" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">MAGIC GUN</span>
+        </div>
+        <div class="warrior_weapon" id="Socerer_Others" style="left : -100%;">
+          <span style="font-family : 'Star',cursive; font-size : 2.5vw; color : #fff;">OTHERS</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- 세 번째 영역 !-->
   <div id="accessory">
-
-  </div>
-
-  <!-- 네 번째 영역 !-->
-  <div id="bosses">
-
-  </div>
-  <!-- 다섯 번째 영역 !-->
-  <div id="enemy">
-
-  </div>
-  <!-- 여섯 번째 영역 !-->
-  <div id="biome">
-
-  </div>
-
-
-  <!-- 저작권 !-->
-  <div class="copyright">
-    <div class="main" style="overflow-x : hidden; overflow-y : hidden;">
-      <!-- 메인 제목 부분 (Calamity) !-->
-      <div style="position : relative; width : 100vw; margin : 0 auto; text-align : center;">
-        <p style="color:#000; font-family:'Star';" class="main_text">COPYRIGHT</p>
-        <span style="color:#000;">이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 3.0 Unported</span>
-        <span style="color:#000;">출처 : <a href="https://calamitymod.gamepedia.com/Calamity_Mod_Wiki" target="_blank">테라리아 공식 모드 위키</a></span>
+    <div id="accessory_frame_one" style="height : 100%; width : 100%; position : absolute; z-index : 10; ">
+      <div class="weapon_text">
+        <span class="submenu_text">ACCESSORY</span>
       </div>
-      <!-- 메인 콘텐츠 아이콘 부분 !-->
-      <div style="margin-top : 13vh;">
-        <div style="width : 900px; margin : 0 auto; text-align:center; height : 27vh;">
-          <div class="icon">
-            <img src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="top : 84px; left: 56px;" class="Frontend" id="img_Soul_Edge">
-            <img src="img/Main_img/Menu_Black.png" class="Backend" usemap=#Copy>
-            <map name="Copy">
+      <!-- 애니메이션이 일어났을때 영역을 벗어나는 버그를 수정하기 위해 늘 고정하는 투명 영역입니다. !-->
+      <div class="div_text_BUG" style="z-index : -1000; position :absolute; top : -70px; visibility : hidden;">
+        <span class="submenu_text">BUG</span>
+      </div>
+      <!-- ////////////////////////////////////////////////////////////////////////////////// !-->
+      <div class="margin_Box">
+        <div class="accessory_Content">
+          <img src="img/Accessory_image/Health.png" class = "picture" style="margin : 0vw 2vw 2vw 0vw;"></img>
+          <img src="img/Accessory_image/Mining.png" class = "picture" style="margin : 0vw 2vw 2vw 1vw;"></img>
+          <img src="img/Accessory_image/Fishing.png" class = "picture" style="margin : 0vw 2vw 2vw 1vw;"></img>
+          <img src="img/Accessory_image/Move.png" class = "picture" style="margin : 0vw 0vw 2vw 1vw;"></img><br>
+          <img src="img/Accessory_image/Revengeance.png" class = "picture" style="margin : 1vw 2vw 0vw 0vw;"></img>
+          <img src="img/Accessory_image/Combat.png" class = "picture" style="margin : 1vw 2vw 0vw 1vw;"></img>
+          <img src="img/Accessory_image/Expert.png" class = "picture" style="margin : 1vw 2vw 0vw 1vw;"></img>
+          <img src="img/Accessory_image/abyss.png" class = "picture" style="margin : 1vw 0vw 0vw 1vw;"></img>
+        </div>
+      </div>
+      <div>
+      </div>
+      <!-- 네 번째 영역 !-->
+      <div id="bosses">
+
+      </div>
+      <!-- 다섯 번째 영역 !-->
+      <div id="enemy">
+
+      </div>
+      <!-- 여섯 번째 영역 !-->
+      <div id="biome">
+        <div id="biome_frame_one" style="height : 100%; width : 100%; position : absolute; z-index : 10; ">
+          <div class="weapon_text">
+            <span class="submenu_text">BIOME</span>
+          </div>
+          <!-- 애니메이션이 일어났을때 영역을 벗어나는 버그를 수정하기 위해 늘 고정하는 투명 영역입니다. !-->
+          <div class="div_text_BUG" style="z-index : -1000; position :absolute; top : -70px; visibility : hidden;">
+            <span class="submenu_text">BUG</span>
+          </div>
+          <!-- ////////////////////////////////////////////////////////////////////////////////// !-->
+          <div class="margin_Box">
+            <div class="biome_Content">
+              <img src="img/biome/BiomeBannerSulphurousSea.png" style="margin : 0px 1vw 1vw 0px;">
+              <img src="img/biome/BiomeBannerAstralMeteor.png" style="margin : 0px 0vw 1vw 1vw;">
+              <img src="img/biome/BiomeBannerAbyss.png" style="margin : 1vw 1vw 0vw 0px;">
+              <img src="img/biome/BiomeBannerProfanedCrags.png" style="margin : 1vw 0vw 0vw 1vw;">
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!-- 저작권 !-->
+      <div class="copyright">
+        <div class="main" style="overflow-x : hidden; overflow-y : hidden;">
+          <!-- 메인 제목 부분 (Calamity) !-->
+          <div style="position : relative; width : 100vw; margin : 0 auto; text-align : center;">
+            <p style="color:#000; font-family:'Star';" class="main_text">COPYRIGHT</p>
+            <span style="color:#000;">이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 3.0 Unported</span>
+            <span style="color:#000;">출처 : <a href="https://calamitymod.gamepedia.com/Calamity_Mod_Wiki" target="_blank">테라리아 공식 모드 위키</a></span>
+          </div>
+          <!-- 메인 콘텐츠 아이콘 부분 !-->
+          <div style="margin-top : 13vh;">
+            <div style="width : 900px; margin : 0 auto; text-align:center; height : 27vh;">
+              <div class="icon">
+                <img src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="top : 84px; left: 56px;" class="Frontend" id="img_Soul_Edge">
+                <img src="img/Main_img/Menu_Black.png" class="Backend" usemap=#Copy>
+                <map name="Copy">
             <area shape = "poly" coords="0,100,100,200,200,100,100,0" rel = "license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" id="Menu_Copy">
             </map>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
 
 
 
-  <!-- 비디오 사용 !-->
+      <!-- 비디오 사용 !-->
 
-  <script>
-    $('.covervid-video').coverVid(640, 360);
-  </script>
-  <script>
-    $("#weapon").quietflow({
+      <script>
+        $('.covervid-video').coverVid(640, 360);
+      </script>
+      <script>
+        $("#weapon").quietflow({
 
-    });
-  </script>
+        });
+      </script>
 </body>
 
 </html>
